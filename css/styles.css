@@ -1,0 +1,303 @@
+/*--------------------- ESTA APLICADO DESDE 320PX--------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: black;
+
+
+
+}
+
+ul,
+ol {
+    list-style: none;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------COMIENZO DEL HEADER-------------------*/
+
+header {
+    background-color: black;
+    color: aliceblue;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 800;
+
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+
+}
+
+/*main*/
+
+
+
+main {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+
+
+
+}
+
+/*------------------- SECCION NOSOTROS-------------------*/
+
+.nosotros {
+    padding: 20px;
+    background-color: rgb(8, 10, 12);
+    color: aliceblue;
+
+}
+
+
+.nosotros-texto {
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*------------------- SECCION CONDECORACIONES-------------------*/
+.condecoraciones h2 {
+    text-align: start;
+    background-color: rgb(204, 143, 31);
+    color: aliceblue;
+
+    padding: 15px;
+
+}
+
+.contenedor-reseña {
+    padding: 15px;
+
+    display: flex;
+    overflow-x: scroll;
+
+}
+
+.reseña-hotel {
+    border: 1px rgb(255, 255, 255) groove;
+    border-radius: 15px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+
+    margin: 5px 10px;
+    padding: 15px;
+
+}
+
+.reseña-hotel img {
+    width: 50%;
+}
+
+.reseña-hotel a {
+    border: solid 2px aliceblue;
+    background-color: silver;
+    color: black;
+}
+
+/*---------------------SECCION VIDEO-------------------*/
+
+
+.video {
+    text-align: center;
+    background-color: rgb(204, 143, 31);
+    color: aliceblue;
+    padding: 10px;
+
+}
+
+/*-------------------SECCION PREMIOS--------------------*/
+
+.premios h3 {
+    text-align: center;
+    background-color: rgb(204, 143, 31);
+    color: aliceblue;
+
+    padding: 20px;
+}
+
+.seccion-premios {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.caja-premio {
+    border: 2px aliceblue groove;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    color: aliceblue;
+
+    margin: 5px 5px;
+    padding: 5px;
+
+}
+
+.caja-premio img {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------SECCION POLITICAS-------------------*/
+
+.politicas h2 {
+    text-align: center;
+    background-color: rgb(204, 143, 31);
+    color: aliceblue;
+
+    padding: 20px;
+
+}
+
+.politicas i {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.contenedor-politicas {
+    color: aliceblue;
+    border: groove 1px aliceblue;
+    padding: 20px;
+    margin: 0 5px
+}
+
+
+
+
+
+@media(min-width:1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header nav {
+        width: 50%;
+    }
+
+    /*-----------------------MAIN------------------*/
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 20vw;
+        grid-template-rows: repeat(3, 1fr);
+
+        grid-template-areas:
+            "nosotros nosotros premios"
+            "condecoraciones condecoraciones premios"
+            "video politicas politicas";
+    }
+
+    /*------------------- SECCION NOSOTROS-------------------*/
+
+    .nosotros {
+        grid-area: nosotros;
+    }
+
+    .nosotros-texto {
+        font-size: 1.5rem;
+        text-align: start;
+    }
+
+    /*---------------------SECCION CONDECORACIONES-----------*/
+
+    .condecoraciones {
+        grid-area: condecoraciones;
+    }
+
+    /*---------------SECCION PREMIOS----------------*/
+    .premios {
+
+        grid-area: premios;
+
+        min-width: 50px;
+    }
+
+
+    .seccion-premios {
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow-x: scroll;
+
+    }
+
+    .caja-premio {
+        border: 2px aliceblue groove;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        color: aliceblue;
+
+        margin: 5px 5px;
+        padding: 5px;
+    }
+
+    /*--------------------SECCION VIDEO---------------*/
+
+    .videos {
+        grid-area: video;
+
+    }
+
+    /*------------------------SECCION POLITICAS----------------*/
+
+    .politicas {
+        grid-area: politicas;
+    }
+}
